@@ -1,0 +1,70 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: dark --default;
+}
+
+.satoshi {
+  font-family: "Satoshi", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  color-scheme: dark;
+
+  /* ===============================
+     Background & Base (Black UI)
+     =============================== */
+  --color-base-100: #0b0d10; /* main app background (almost black) */
+  --color-base-200: #111318; /* cards / sections */
+  --color-base-300: #1a1d23; /* borders / dividers */
+
+  /* ===============================
+     Text & Content Colors
+     =============================== */
+  --color-base-content: #e5e7eb; /* primary text (soft white) */
+  --color-neutral: #9ca3af; /* secondary text / muted */
+  --color-neutral-content: #0b0d10;
+
+  /* ===============================
+     Brand / Accent Colors
+     =============================== */
+  --color-primary: #ffb900; /* CTA yellow */
+  --color-primary-content: #0b0d10;
+
+  --color-secondary: #ffd230; /* highlights / rating / emphasis */
+  --color-secondary-content: #0b0d10;
+
+  --color-accent: #2a2a2a; /* subtle accent / hover glow */
+  --color-accent-content: #e5e7eb;
+
+  /* ===============================
+     Functional Colors
+     =============================== */
+  --color-info: #38bdf8;
+  --color-info-content: #0b0d10;
+
+  --color-success: #22c55e;
+  --color-success-content: #0b0d10;
+
+  --color-warning: #fbbf24;
+  --color-warning-content: #0b0d10;
+
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+
+  /* ===============================
+     Radius & Depth (Modern look)
+     =============================== */
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 32px;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
