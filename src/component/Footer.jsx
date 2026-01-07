@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowUpRight, Facebook, Linkedin, X } from "lucide-react";
 import Button from "./ui/Button";
-import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import LiveStatus from "./liveStatus/LiveStatus";
 
@@ -82,18 +82,32 @@ const Footer = () => {
           <div className="flex gap-4">
             <a
               href="https://www.facebook.com/S.D.MD.Nayeem/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-base-100 flex items-center justify-center border border-base-300 hover:bg-base-200 transition-all"
             >
               <FaFacebook size={20} />
             </a>
             <a
               href="https://www.linkedin.com/in/md-nayeem98/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-base-100 flex items-center justify-center border border-base-300 hover:bg-base-200 transition-all"
             >
               <FaLinkedinIn size={20} />
             </a>
             <a
+              href="https://github.com/MD-Nayeem909"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-base-100 flex items-center justify-center border border-base-300 hover:bg-base-200 transition-all"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
               href="https://x.com/md_nayeem98"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-base-100 flex items-center justify-center border border-base-300 hover:bg-base-200 transition-all"
             >
               <FaXTwitter size={20} />

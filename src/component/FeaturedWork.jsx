@@ -1,7 +1,8 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router";
 
-const ProjectCard = ({ title, description, image, isYellowTitle }) => {
+const ProjectCard = ({ title, link, description, image, isYellowTitle }) => {
   return (
     <div className="group cursor-pointer">
       {/* Project Image Container */}
@@ -14,9 +15,13 @@ const ProjectCard = ({ title, description, image, isYellowTitle }) => {
 
         {/* View Project Overlay (Optional) */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
-          <div className="bg-primary text-black px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+          <Link
+            to={link}
+            target="_blank"
+            className="bg-primary text-black px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform"
+          >
             View Project <ArrowUpRight size={18} />
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -42,32 +47,36 @@ const ProjectCard = ({ title, description, image, isYellowTitle }) => {
 const FeaturedWork = () => {
   const projects = [
     {
-      title: "Website Redesign",
+      title: "ENTRIA Website Redesign",
+      link: "https://b12-a11-assignment-entria-client-om1r-4sc6v0jip.vercel.app/",
       description:
-        "Revamping outdated layouts into modern, responsive websites that improve usability and engagement.",
+        "A full-stack contest management platform where users can participate in contests, creators can organize contests, and admins can monitor reports and activities.",
       image:
-        "https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?semt=ais_hybrid&w=740&q=80",
+        "https://i.ibb.co.com/MyD70tKB/Entria.png?auto=format&fit=crop&q=80&w=800",
     },
     {
-      title: "Branding Identity Design",
+      title: "Food Lover",
+      link: "https://b12-a10-food-lover-client.vercel.app/",
       description:
         "Crafting unique brand identities that reflect values, connect with audiences, and stand out.",
       image:
-        "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800",
+        "https://i.ibb.co.com/RGM7k2nN/Food-Lover4.png?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Creative Hub Website",
+      link: "https://warmpawsss.netlify.app/",
       description:
         "Designing an engaging platform that brings ideas, content, and communities together seamlessly.",
       image:
-        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800",
+        "https://i.ibb.co.com/67c4bfny/Warm-Paws.png?auto=format&fit=crop&q=80&w=800",
     },
     {
-      title: "Mobile App MVP Designs",
+      title: "Branding Identity Design",
+      link: "/projects/mobile-app-mvp-designs",
       description:
-        "Building clean, user-friendly MVPs that validate ideas quickly and deliver real impact.",
+        "Building clean, user-friendly Logos that validate ideas quickly and deliver real impact.",
       image:
-        "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=800",
+        "https://i.ibb.co.com/qLwZ7dFK/Concept-5.jpg?auto=format&fit=crop&q=80&w=800",
       isYellowTitle: true,
     },
   ];

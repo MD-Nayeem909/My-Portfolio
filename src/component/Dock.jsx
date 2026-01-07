@@ -8,13 +8,14 @@ import {
 } from "framer-motion";
 import {
   FaFacebook,
+  FaGithub,
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
 
 const Facebook = ({ className }) => <FaFacebook className={className} />;
-const Instagram = ({ className }) => <FaInstagram className={className} />;
+const Github = ({ className }) => <FaGithub className={className} />;
 const LinkedIn = ({ className }) => <FaLinkedinIn className={className} />;
 const Whatsapp = ({ className }) => <FaWhatsapp className={className} />;
 const DockIcon = ({ mouseY, href, children, onClick }) => {
@@ -92,9 +93,9 @@ const Dock = () => {
       href: "https://www.facebook.com/S.D.MD.Nayeem/",
     },
     {
-      name: "Instagram",
-      component: Instagram,
-      href: "https://www.instagram.com/_nay_eem_moha_m_mad/",
+      name: "Github",
+      component: Github,
+      href: "https://github.com/MD-Nayeem909",
     },
     {
       name: "LinkedIn",

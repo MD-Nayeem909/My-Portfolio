@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "../../assets/Profile2.JPG";
-import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const ProfileCard = () => {
@@ -23,12 +23,12 @@ const ProfileCard = () => {
           <FaFacebook />
         </a>
         <a
-          href="https://www.instagram.com/_nay_eem_moha_m_mad/"
+          href="https://github.com/MD-Nayeem909"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 text-neutral hover:text-primary transition-colors"
         >
-          <FaInstagram />
+          <FaGithub />
         </a>
         <a
           href="https://www.linkedin.com/in/md-nayeem98/"
