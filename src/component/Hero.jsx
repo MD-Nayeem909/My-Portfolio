@@ -112,10 +112,14 @@ export default function Hero() {
       <Container>
         <div className="min-h-screen flex flex-col-reverse md:flex-row items-center md:gap-10 justify-center">
           <div className="flex flex-col items-center md:items-end">
-            <h1 className="text-3xl text-right sm:text-4xl md:text-5xl lg:text-6xl font-bold text-base-content mt-4 mb-4 leading-tight transition-colors duration-300 satoshi">
+            <h1 className="text-3xl text-right sm:text-4xl md:text-5xl lg:text-6xl font-bold text-base-content mt-4 mb-2 leading-tight transition-colors duration-300 satoshi">
               MOHAMMAD <span className="text-primary">NAYEEM</span>
               <br className="hidden sm:block" />
             </h1>
+            <div></div>
+            <p className="relative text-xl md:text-3xl lg:text-5xl font-bold mb-4 leading-tight satoshi pb-2 border-primary">Full Stack Developer
+              <div className="absolute -bottom-4 md:right-28 translate-x-1/2 w-1/2 h-1 md:h-1.5 bg-primary"></div>
+            </p>
             <p className=" sm:text-lg text-neutral max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed transition-colors duration-300 text-center md:text-right">
               Welcome to my portfolio! I'm Mohammad Nayeem, a passionate web
               developer dedicated to crafting beautiful and functional digital
