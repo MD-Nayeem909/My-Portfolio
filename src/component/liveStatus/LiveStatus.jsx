@@ -43,7 +43,7 @@ const LiveStatus = () => {
   }, []);
 
   return (
-    <div className="text-right flex flex-col items-end">
+    <div className="md:text-right flex flex-col items-center md:items-end">
       <span className="text-base-content font-medium tabular-nums">{time}</span>
       <span className="text-xs text-neutral uppercase tracking-wider">
         Bangladesh: {weather.condition}, {weather.temp}°C

@@ -9,8 +9,8 @@ import { FiDownload } from "react-icons/fi";
 const About = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/assets/NAYEEM.pdf";
-    link.download = "NAYEEM.pdf";
+    link.href = "/assets/Resume.pdf";
+    link.download = "Mohammad_Nayeem_Resume.pdf";
     link.click();
   };
   return (
@@ -31,8 +31,8 @@ const About = () => {
               <h2 className="text-5xl font-bold mb-4 leading-tight satoshi">
                 Passionate & Lead <br />
               </h2>
-              <p className="text-xl mb-4">
-                Web Developer | Brand Identity Designer
+              <p className="text-xl font-semibold mb-4">
+                Frontend Web Developer | MERN Stack (Junior)
               </p>
 
               <p className="text-neutral max-w-xl leading-relaxed">

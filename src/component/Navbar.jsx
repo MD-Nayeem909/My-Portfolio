@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
+import { Link } from "react-router";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,37 +25,37 @@ const Navbar = () => {
     {
       name: "Home",
       id: "home",
-      href: "#home",
+      href: "/#",
       text: "Home",
     },
     {
       name: "About",
       id: "about",
-      href: "#about",
+      href: "/#about",
       text: "About",
     },
     {
       name: "Services",
       id: "services",
-      href: "#services",
+      href: "/#services",
       text: "Services",
     },
     {
       name: "Skills",
       id: "skills",
-      href: "#skills",
+      href: "/#skills",
       text: "Skills",
     },
     {
       name: "Projects",
       id: "projects",
-      href: "#projects",
+      href: "/#projects",
       text: "Projects",
     },
     {
       name: "Support",
       id: "support",
-      href: "#support",
+      href: "/#support",
       text: "Support",
     },
   ];
@@ -93,7 +94,7 @@ const Navbar = () => {
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
           {}
           <div className="flex items-center">
-            <a href="#" className="flex items-center space-x-2 group">
+            <Link to="/" className="flex items-center space-x-2 group">
               <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-base-300 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
                 <span className="text-primary font-bold text-base sm:text-lg lg:text-xl">
                   N
@@ -102,7 +103,7 @@ const Navbar = () => {
               <span className="font-bold text-lg sm:text-xl lg:text-2xl text-base-content">
                 MOHAMMAD_NAYEEM
               </span>
-            </a>
+            </Link>
           </div>
 
           {}
@@ -139,15 +140,13 @@ const Navbar = () => {
 
           {}
           <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
-            <a
-              href="/assets/NAYEEM.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="resume"
               className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium text-base-content border border-neutral/30 rounded-md hover:bg-base-300 transition-all hover:shadow-md transform hover:scale-105"
             >
               <span>Resume</span>
               <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
-            </a>
+            </Link>
             <button className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-primary text-primary-content rounded-md hover:bg-secondary transition-all shadow-sm hover:shadow-lg transform hover:scale-105">
               Hire Me
             </button>
@@ -186,13 +185,13 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4 mt-2 border-t border-base-300 flex flex-col space-y-2">
-                <a
-                  href="#"
+                <Link
+                  to="resume"
                   className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium border border-base-300 rounded-md hover:bg-base-100 transition-colors"
                 >
                   <span>Resume</span>
                   <ExternalLink className="h-4 w-4" />
-                </a>
+                </Link>
                 <button className="px-3 py-2.5 text-sm font-medium bg-base-100 text-primary dark:text-gray-900 rounded-md hover:bg-base-300 transition-colors">
                   Hire Me
                 </button>

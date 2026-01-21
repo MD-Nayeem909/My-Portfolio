@@ -3,7 +3,7 @@ import React from "react";
 const ContactCard = () => {
   return (
     <div className="">
-      <h3 className="text-xl text-primary font-semibold mb-8">✦ Contact</h3>
+      <h3 className="text-xl text-primary font-semibold mb-8 ">✦ Contact</h3>
       <div className="">
         <p className="flex justify-between bg-base-100 border border-base-300 p-6">
           <span className="text-neutral">Phone </span>{" "}
@@ -15,7 +15,7 @@ const ContactCard = () => {
         </p>
         <p className="flex justify-between bg-base-100 border border-base-300 p-6 text-right">
           <span className="text-neutral">Address </span>{" "}
-          <span>Bandarban, Chittagong, Bangladesh</span>
+          <span>Chittagong, Bangladesh</span>
         </p>
       </div>
     </div>

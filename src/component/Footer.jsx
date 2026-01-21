@@ -29,10 +29,10 @@ const Footer = () => {
         </div>
 
         {/* Middle Section: Navigation & Socials */}
-        <div className="flex flex-col md:flex-row justify-between items-end border-b border-base-300 pb-12 mb-8 gap-10">
-          <div className="flex flex-col gap-6">
+        <div className="flex flex-col md:flex-row items-center md:justify-between md:items-end border-b border-base-300 pb-12 mb-8 gap-10">
+          <div className="flex flex-col gap-8">
             {/* Main Links */}
-            <nav className="flex flex-wrap gap-8 text-lg">
+            <nav className="flex flex-wrap items-center justify-center gap-8 text-lg leading-2">
               <a href="#" className="text-primary font-medium">
                 Home
               </a>
@@ -63,9 +63,9 @@ const Footer = () => {
             </nav>
 
             {/* Secondary Links */}
-            <nav className="flex flex-wrap gap-6 text-sm text-neutral uppercase tracking-widest">
+            <nav className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-neutral uppercase tracking-widest">
               <a
-                href="/assets/NAYEEM.pdf"
+                href="/assets/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 ">
             <a
               href="https://www.facebook.com/S.D.MD.Nayeem/"
               target="_blank"
@@ -117,13 +117,17 @@ const Footer = () => {
 
         {/* Bottom Section: Copyright & Info */}
         <div className="flex flex-col md:flex-row justify-between items-center text-neutral text-sm gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center overflow-hidden">
-              <span className="text-base-100 font-bold text-xs">N</span>
-            </div>
-            <span className="text-base-content font-bold text-xl tracking-tight">
-              MOHAMMAD_NAYEEM
-            </span>
+          <div className="flex items-center">
+            <a href="#" className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
+                <span className="text-base-100 font-bold text-base sm:text-lg lg:text-xl">
+                  N
+                </span>
+              </div>
+              <span className="font-bold text-lg sm:text-xl text-base-content">
+                MOHAMMAD_NAYEEM
+              </span>
+            </a>
           </div>
 
           <div className="text-center">
