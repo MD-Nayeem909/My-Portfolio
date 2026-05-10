@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../component/Hero";
+import TerminalSection from "../component/TerminalSection";
 import Dock from "../component/Dock";
 import GridBackgroundView from "../component/GridBackgroundView";
 import About from "../component/About";
@@ -18,6 +19,7 @@ const Home = () => {
           <GridBackgroundView />
         </div>
         <Hero />
+        <TerminalSection />
         <About />
         <MyServices />
         <Skills />
