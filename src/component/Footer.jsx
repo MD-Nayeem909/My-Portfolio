@@ -23,7 +23,10 @@ const Footer = () => {
             </h2>
           </div>
 
-          <Button className="">
+          <Button 
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            className=""
+          >
             Start a Project Now <ArrowUpRight size={22} />
           </Button>
         </div>

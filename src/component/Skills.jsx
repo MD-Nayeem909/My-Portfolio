@@ -22,59 +22,59 @@ const SkillGroup = ({ title, skills }) => (
 const Skills = () => {
   const skillData = [
     {
-      category: "Frontend Tech",
+      category: "Frontend & UI",
       groups: [
         {
           title: "Core Technologies",
           skills: [
             "HTML5",
             "CSS3",
-            "JavaScript",
-            "ES6+",
-            "Web APIs",
+            "JavaScript (ES6+)",
             "Responsive Design",
           ],
         },
-        { title: "Frontend Frameworks", skills: ["ReactJs", "NextJs"] },
-        { title: "State Management", skills: ["Context API", "React Query"] },
+        { title: "Frameworks & State", skills: ["React.js", "Next.js", "Context API"] },
         {
           title: "UI Libraries",
           skills: [
             "Tailwind CSS",
-            "Material UI",
-            "Shadcn UI",
-            "Sera UI",
-            "Chakra UI",
-            "Daisy UI",
-            "Styled Components",
+            "Shadcn",
+            "DaisyUI",
           ],
         },
       ],
     },
     {
-      category: "Backend Tech",
+      category: "Backend & Database",
       groups: [
         {
           title: "Core Technologies",
-          skills: ["NodeJs", "ExpressJs", "MongoDB", "Firebase"],
+          skills: ["Node.js", "Express.js", "MongoDB", "RESTful API"],
+        },
+        {
+          title: "Auth & Validation",
+          skills: ["JWT", "Zod"],
         },
       ],
     },
     {
-      category: "Build Tools",
+      category: "Tools & Platforms",
       groups: [
         {
-          title: "Tools & Workflow",
+          title: "Development Tools",
           skills: [
-            "npm",
-            "Vite",
-            "Figma",
-            "ESLint",
-            "Webpack",
+            "Git/GitHub",
             "Postman",
-            "VS code",
-            "Prettier",
-            "Git-Github",
+            "VS Code",
+            "Figma",
+          ],
+        },
+        {
+          title: "Deployment & Services",
+          skills: [
+            "Firebase",
+            "Vercel",
+            "Netlify",
           ],
         },
       ],

@@ -180,9 +180,22 @@ const Navbar = () => {
               <span>Resume</span>
               <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
             </Link>
-            <button className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-primary text-primary-content rounded-md hover:bg-secondary transition-all shadow-sm hover:shadow-lg transform hover:scale-105">
+            <Link 
+              to="/#contact"
+              onClick={(e) => {
+                if (location.pathname === "/") {
+                  e.preventDefault();
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                } else {
+                  setTimeout(() => {
+                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }
+              }}
+              className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-primary text-black rounded-md hover:bg-secondary transition-all shadow-sm hover:shadow-lg transform hover:scale-105 flex items-center justify-center"
+            >
               Hire Me
-            </button>
+            </Link>
           </div>
 
           {}
@@ -252,9 +265,23 @@ const Navbar = () => {
                   <span>Resume</span>
                   <ExternalLink className="h-4 w-4" />
                 </Link>
-                <button className="px-3 py-2.5 text-sm font-medium bg-base-100 text-primary rounded-md hover:bg-base-300 transition-colors">
+                <Link 
+                  to="/#contact"
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    if (location.pathname === "/") {
+                      e.preventDefault();
+                      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      setTimeout(() => {
+                        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                      }, 100);
+                    }
+                  }}
+                  className="px-3 py-2.5 text-sm font-medium bg-base-100 text-primary rounded-md hover:bg-base-300 transition-colors flex items-center justify-center"
+                >
                   Hire Me
-                </button>
+                </Link>
               </div>
             </div>
           </div>

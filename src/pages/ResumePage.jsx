@@ -7,6 +7,7 @@ import {
   Briefcase,
   GraduationCap,
   Code,
+  ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router";
 
@@ -121,7 +122,23 @@ const ResumePage = () => {
                 <GraduationCap size={20} /> Education
               </h2>
               <div className="space-y-6">
-                <div>
+                <div className="relative">
+                  <div className="absolute -left-8 top-1 w-4 h-4 rounded-full bg-primary"></div>
+                  <h4 className="font-bold text-base-content">
+                    Complete Web Development Course (MERN)
+                  </h4>
+                  <p className="text-sm text-neutral">Programming Hero</p>
+                  <a 
+                    href="/assets/Complete Web Development Course Certificate.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-secondary mt-2 font-medium"
+                  >
+                    View Certificate <ExternalLink size={14} />
+                  </a>
+                </div>
+                <div className="relative">
+                  <div className="absolute -left-8 top-1 w-4 h-4 rounded-full bg-base-content/20"></div>
                   <h4 className="font-bold text-base-content">
                     Bachelor of Social Sciences - Economics
                   </h4>

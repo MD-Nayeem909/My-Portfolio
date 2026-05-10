@@ -64,7 +64,10 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
             >
-              <Button className="font-bold flex items-center justify-center gap-2 px-8 py-3.5 w-full sm:w-auto shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all hover:-translate-y-1">
+              <Button 
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                className="font-bold flex items-center justify-center gap-2 px-8 py-3.5 w-full sm:w-auto shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all hover:-translate-y-1"
+              >
                 Start a Project <ArrowUpRight size={20} />
               </Button>
               <a

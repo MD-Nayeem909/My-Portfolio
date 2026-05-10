@@ -7,6 +7,7 @@ import MyServices from "../component/myServices/MyServices";
 import SupportSection from "../component/SupportSection";
 import FeaturedWork from "../component/FeaturedWork";
 import Skills from "../component/Skills";
+import Contact from "../component/Contact";
 import SmoothScroll from "../component/ui/SmoothScroll";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
         <Skills />
         <FeaturedWork />
         <SupportSection />
+        <Contact />
         <Dock />
       </div>
     </SmoothScroll>

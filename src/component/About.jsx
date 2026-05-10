@@ -82,9 +82,10 @@ const About = () => {
               </div>
 
               <EducationItem
-                title="MARN Stack Developer Certificate"
+                title="MERN Stack Developer Certificate"
                 institute="Programming Hero"
-                date="2025 - Present"
+                date="Completed"
+                certificateUrl="/assets/Complete Web Development Course Certificate.pdf"
               />
 
               <EducationItem

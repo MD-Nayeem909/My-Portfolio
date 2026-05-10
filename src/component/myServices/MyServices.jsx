@@ -141,7 +141,10 @@ const MyServices = () => {
             Experience the impact of user-centered design. I craft intuitive and
             engaging digital solutions that put users first.
           </p>
-          <Button className="font-bold flex items-center gap-2 transition-all">
+          <Button 
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            className="font-bold flex items-center gap-2 transition-all"
+          >
             Start a Project Now <ArrowUpRight size={20} />
           </Button>
         </div>
