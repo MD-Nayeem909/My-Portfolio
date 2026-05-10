@@ -8,9 +8,20 @@ const FeaturedWork = () => {
 
   const projects = [
     {
-      title: "ENTRIA Website Redesign",
+      title: "FastParcel - Enterprise Logistics & Dynamic Marketplace",
+      link: "https://fastparcel-next-app.vercel.app/",
+      githubLink: "https://github.com/MD-Nayeem909/fast-parcel",
+      description:
+        "A professional, role-based parcel delivery and management application featuring a robust notification system, real-time status updates, and a dedicated dashboard.",
+      image:
+        "https://i.ibb.co.com/394QBzcM/Fast-Parcel.png",
+      category: "MERN Stack",
+      techStack: ["Next.js", "MongoDB", "Tailwind CSS", "Framer Motion"]
+    },
+    {
+      title: "ENTRIA Contest Platform",
       link: "https://b12-a11-assignment-entria-client-om1r-4sc6v0jip.vercel.app/",
-      githubLink: "https://github.com/MD-Nayeem909",
+      githubLink: "https://github.com/MD-Nayeem909/Entria_Client",
       description:
         "A full-stack contest management platform where users can participate in contests, creators can organize contests, and admins can monitor reports and activities.",
       image:
@@ -22,24 +33,13 @@ const FeaturedWork = () => {
     {
       title: "Food Lover",
       link: "https://b12-a10-food-lover-client.vercel.app/",
-      githubLink: "https://github.com/MD-Nayeem909",
+      githubLink: "https://github.com/MD-Nayeem909/B12A10-FoodLover-client",
       description:
         "A responsive and dynamic food delivery web application offering seamless task management and user authentication features.",
       image:
         "https://i.ibb.co.com/RGM7k2nN/Food-Lover4.png?auto=format&fit=crop&q=80&w=800",
       category: "Frontend",
       techStack: ["React.js", "Tailwind CSS", "MongoDB", "JWT"]
-    },
-    {
-      title: "FastParcel - Enterprise Logistics & Dynamic Marketplace",
-      link: "https://fastparcel-next-app.vercel.app/",
-      githubLink: "https://github.com/MD-Nayeem909",
-      description:
-        "A professional, role-based parcel delivery and management application featuring a robust notification system, real-time status updates, and a dedicated dashboard.",
-      image:
-        "https://i.ibb.co.com/394QBzcM/Fast-Parcel.png",
-      category: "MERN Stack",
-      techStack: ["Next.js", "MongoDB", "Tailwind CSS", "Framer Motion"]
     },
     {
       title: "Branding Identity Design",
@@ -79,7 +79,7 @@ const FeaturedWork = () => {
             </p>
           </div>
 
-          <button className="bg-primary text-black px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-secondary transition-all self-start md:self-center whitespace-nowrap shadow-lg shadow-primary/20">
+          <button className="bg-primary text-primary-content px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-secondary transition-all self-start md:self-center whitespace-nowrap shadow-lg shadow-primary/20">
             Explore all Projects <ArrowUpRight size={20} />
           </button>
         </div>

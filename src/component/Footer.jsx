@@ -75,9 +75,7 @@ const Footer = () => {
               >
                 Resume Download
               </a>
-              <a href="#" className="hover:text-base-content transition-colors">
-                Instructions
-              </a>
+
             </nav>
           </div>
 

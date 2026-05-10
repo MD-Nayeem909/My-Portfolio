@@ -55,7 +55,7 @@ const ServiceItem = ({
           <div
             className={`p-3 rounded-full transition-all duration-300 ${
               isActive
-                ? "bg-primary text-black"
+                ? "bg-primary text-primary-content"
                 : "bg-base-100 text-base-content"
             }`}
           >

@@ -17,7 +17,7 @@ const ProjectCard = ({ title, link, githubLink, description, image, isYellowTitl
           <Link
             to={link}
             target="_blank"
-            className="bg-primary text-black px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            className="bg-primary text-primary-content px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
           >
             Live Demo <ArrowUpRight size={18} />
           </Link>

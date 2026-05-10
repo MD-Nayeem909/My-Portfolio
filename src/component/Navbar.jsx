@@ -192,7 +192,7 @@ const Navbar = () => {
                   }, 100);
                 }
               }}
-              className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-primary text-black rounded-md hover:bg-secondary transition-all shadow-sm hover:shadow-lg transform hover:scale-105 flex items-center justify-center"
+              className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-primary text-primary-content rounded-md hover:bg-secondary transition-all shadow-sm hover:shadow-lg transform hover:scale-105 flex items-center justify-center"
             >
               Hire Me
             </Link>

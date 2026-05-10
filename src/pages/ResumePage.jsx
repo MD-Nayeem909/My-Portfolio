@@ -19,7 +19,7 @@ const ResumePage = () => {
     link.click();
   };
   return (
-    <div className="min-h-screen bg-black text-base-content satoshi py-20 px-6 md:px-20">
+    <div className="min-h-screen bg-base-100 text-base-content satoshi py-20 px-6 md:px-20">
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-base-300 pb-12 mb-12 gap-6">

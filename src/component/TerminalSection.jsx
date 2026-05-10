@@ -59,9 +59,9 @@ const TerminalSection = () => {
           break;
         case "projects":
           newOutput = [
-            "1. ENTRIA Website Redesign - Full-stack contest management platform",
-            "2. Food Lover - Responsive food delivery web app",
-            "3. FastParcel - Enterprise Logistics & Dynamic Marketplace",
+            "1. FastParcel - Enterprise Logistics & Dynamic Marketplace",
+            "2. ENTRIA Contest Platform - Full-stack contest management platform",
+            "3. Food Lover - Responsive food delivery web app",
             "Type 'projects' to see more on my portfolio below!",
           ];
           break;
