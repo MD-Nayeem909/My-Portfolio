@@ -65,7 +65,7 @@ const Footer = () => {
             {/* Secondary Links */}
             <nav className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-neutral uppercase tracking-widest">
               <a
-                href="/assets/Resume.pdf"
+                href="/assets/Resume_Mohammad_Nayeem_Uddin.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"

@@ -9,8 +9,8 @@ import { FiDownload } from "react-icons/fi";
 const About = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/assets/Resume.pdf";
-    link.download = "Mohammad_Nayeem_Resume.pdf";
+    link.href = "/assets/Resume_Mohammad_Nayeem_Uddin.pdf";
+    link.download = "Resume_Mohammad_Nayeem_Uddin.pdf";
     link.click();
   };
   return (

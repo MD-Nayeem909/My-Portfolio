@@ -13,8 +13,8 @@ import { Link } from "react-router";
 const ResumePage = () => {
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/assets/Resume.pdf";
-    link.download = "Mohammad_Nayeem_Resume.pdf";
+    link.href = "/assets/Resume_Mohammad_Nayeem_Uddin.pdf";
+    link.download = "Resume_Mohammad_Nayeem_Uddin.pdf";
     link.click();
   };
   return (
@@ -27,17 +27,17 @@ const ResumePage = () => {
               MD. NAYEEM UDDIN
             </h1>
             <p className="text-primary text-xl font-medium tracking-wide">
-              Full Stack Developer & UI/UX Specialist
+              Full Stack Developer
             </p>
             <div className="flex flex-wrap gap-4 mt-6 text-neutral text-sm">
               <Link
-                to="mailto:mdnayeemuddin909@gmailcom"
+                to="mailto:mdnayeemuddin909@gmail.com"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <Mail size={16} /> mdnayeemuddin909@gmail.com
               </Link>
               <span className="flex items-center gap-2">
-                <Phone size={16} /> +8801883-153330
+                <Phone size={16} /> +880-1518-966-045
               </span>
               <span className="flex items-center gap-2">
                 <MapPin size={16} /> Chittagong, Bangladesh
@@ -63,14 +63,11 @@ const ResumePage = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-xs uppercase tracking-widest text-neutral mb-2">
-                    Frontend
+                    Frontend & UI
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      "ReactJs",
-                      "NextJs",
-                      "Tailwind CSS",
-                      "JavaScript (ES6+)",
+                      "JavaScript (ES6+)", "React.js", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "Shadcn", "Responsive Design"
                     ].map((s) => (
                       <span
                         key={s}
@@ -83,10 +80,27 @@ const ResumePage = () => {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-neutral mb-2">
-                    Backend & Tools
+                    Backend & Database
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {["NodeJs", "MongoDB", "Firebase", "Git", "Figma"].map(
+                    {["Node.js", "Express.js", "MongoDB", "RESTful API", "Zod", "JWT"].map(
+                      (s) => (
+                        <span
+                          key={s}
+                          className="text-xs bg-base-100 border border-base-300 px-3 py-1 rounded-md"
+                        >
+                          {s}
+                        </span>
+                      )
+                    )}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-neutral mb-2">
+                    Tools & Platforms
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Git/GitHub", "Firebase", "Postman", "Vercel", "Netlify", "Figma"].map(
                       (s) => (
                         <span
                           key={s}
@@ -109,22 +123,13 @@ const ResumePage = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-base-content">
-                    Higher Secondary Certificate
+                    Bachelor of Social Sciences - Economics
                   </h4>
                   <p className="text-sm text-neutral">
                     Bangladesh Open University (Chittagong)
                   </p>
                   <p className="text-xs text-primary/80 mt-1">
-                    Passing Year: 2021 | GPA: 3.50
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-base-content">
-                    Secondary School Certificate
-                  </h4>
-                  <p className="text-sm text-neutral">Rahmania High School</p>
-                  <p className="text-xs text-primary/80 mt-1">
-                    Passing Year: 2014
+                    2022 - Present
                   </p>
                 </div>
               </div>
@@ -138,57 +143,58 @@ const ResumePage = () => {
                 Summary
               </h2>
               <p className="text-neutral leading-relaxed text-lg">
-                Seeking a challenging position with a future-oriented company
-                offering opportunities for growth. Fast and effectively I want
-                to be a part of success by offering high motivation,
-                responsibility and quality work. Specialized in modern UI/UX
-                design with a deep focus on user-centered digital products.
+                Frontend-focused MERN Stack Developer specializing in React.js and Next.js, experienced in building responsive, user-centric web applications. Seeking a junior frontend role to contribute scalable UI solutions and improve user experience through clean, maintainable code.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold flex items-center gap-2 mb-8 text-primary">
-                <Briefcase size={22} /> Professional Experience
+                <Briefcase size={22} /> Projects
               </h2>
               <div className="space-y-8 border-l-2 border-base-300 pl-6 ml-2">
                 <div className="relative">
                   <div className="absolute -left-8 top-1 w-4 h-4 rounded-full bg-primary"></div>
-                  <h4 className="text-xl font-bold">Brand-Promotor</h4>
-                  <p className="text-neutral italic">Robi Axita Ltd.</p>
+                  <h4 className="text-xl font-bold">FastParcel</h4>
+                  <p className="text-neutral italic">Enterprise Logistics & Dynamic Marketplace (MERN)</p>
                   <p className="text-sm mt-2 text-gray-500">
-                    Communicated effectively to promote brand values and drive
-                    user engagement.
+                    User authentication with role-based access. Product management, cart, and order system. REST API integration with MongoDB.
                   </p>
+                  <p className="text-xs text-primary/80 mt-1">Next.js, Tailwind CSS, Framer Motion</p>
                 </div>
                 <div className="relative">
                   <div className="absolute -left-8 top-1 w-4 h-4 rounded-full bg-base-content/20"></div>
-                  <h4 className="text-xl font-bold">Brand-Promotor</h4>
+                  <h4 className="text-xl font-bold">Entria</h4>
                   <p className="text-neutral italic">
-                    British American Tobacco Bangladesh
+                    Contest Platform (MERN)
                   </p>
                   <p className="text-sm mt-2 text-gray-500">
-                    Responsible for interpersonal communication and achieving
-                    growth targets.
+                    Responsive personal portfolio with modern UI/UX. Smooth animations and page transitions. SEO-friendly and performance-optimized layout.
                   </p>
+                  <p className="text-xs text-primary/80 mt-1">React.js, Node.js, Express.js, MongoDB, Firebase</p>
+                </div>
+                <div className="relative">
+                  <div className="absolute -left-8 top-1 w-4 h-4 rounded-full bg-base-content/20"></div>
+                  <h4 className="text-xl font-bold">Food Lovers Network</h4>
+                  <p className="text-neutral italic">
+                    Task Management
+                  </p>
+                  <p className="text-sm mt-2 text-gray-500">
+                    Create, update, and delete tasks in real time. Secure login with protected routes. Clean dashboard UI for mobile and desktop.
+                  </p>
+                  <p className="text-xs text-primary/80 mt-1">React.js, Tailwind CSS, MongoDB, JWT</p>
                 </div>
               </div>
             </section>
 
             {/* Featured Projects Reference */}
             <section>
-              <h2 className="text-2xl font-bold mb-6">Personal Attributes</h2>
+              <h2 className="text-2xl font-bold mb-6">Language Proficiency</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-neutral">
                 <li className="flex items-center gap-2">
-                  ✓ Self-confident and positive minded
+                  ✓ Bangla (Native)
                 </li>
                 <li className="flex items-center gap-2">
-                  ✓ Capable to take responsibility
-                </li>
-                <li className="flex items-center gap-2">
-                  ✓ Meets pressure and deadlines
-                </li>
-                <li className="flex items-center gap-2">
-                  ✓ Fluently Bilingual (Bengali & English)
+                  ✓ English (Intermediate)
                 </li>
               </ul>
             </section>
