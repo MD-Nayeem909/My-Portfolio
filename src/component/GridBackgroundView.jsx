@@ -24,8 +24,8 @@ const GridBackground = () => {
       className="absolute inset-0 w-full h-full overflow-hidden transition-transform duration-300 ease-out"
       style={{
         backgroundImage: `
-          linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
+          linear-gradient(to right, rgba(128, 128, 128, 0.15) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(128, 128, 128, 0.15) 1px, transparent 1px)
         `,
         backgroundSize: "40px 40px",
         animation: "moveGrid 20s linear infinite",
@@ -35,7 +35,7 @@ const GridBackground = () => {
       }}
     >
       {}
-      <div className="absolute top-1/2 left-1/2 w-[60vmin] h-[60vmin] bg-gray-800/30 rounded-full blur-[350px] -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-1/2 left-1/2 w-[60vmin] h-[60vmin] bg-primary/20 rounded-full blur-[250px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       {}
       <style>
         {`
@@ -50,7 +50,7 @@ const GridBackground = () => {
 };
 export default function GridBackgroundView() {
   return (
-    <div className="w-full h-full bg-black overflow-hidden">
+    <div className="w-full h-full bg-base-100 overflow-hidden">
       <GridBackground />
     </div>
   );

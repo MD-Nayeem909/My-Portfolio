@@ -7,7 +7,7 @@ import LiveStatus from "./liveStatus/LiveStatus";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-base-content pt-20 pb-10 px-4">
+    <footer className="bg-base-200 text-base-content pt-20 pb-10 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Upper Section: Call to Action */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-24 gap-8">
@@ -38,25 +38,25 @@ const Footer = () => {
               </a>
               <a
                 href="#about"
-                className="text-neutral hover:text-white transition-colors"
+                className="text-neutral hover:text-base-content transition-colors"
               >
                 About Me
               </a>
               <a
                 href="#services"
-                className="text-neutral hover:text-white transition-colors"
+                className="text-neutral hover:text-base-content transition-colors"
               >
                 Services
               </a>
               <a
                 href="#projects"
-                className="text-neutral hover:text-white transition-colors"
+                className="text-neutral hover:text-base-content transition-colors"
               >
                 Projects
               </a>
               <a
                 href="#support"
-                className="text-neutral hover:text-white transition-colors"
+                className="text-neutral hover:text-base-content transition-colors"
               >
                 Support
               </a>
@@ -68,11 +68,11 @@ const Footer = () => {
                 href="/assets/Resume_Mohammad_Nayeem_Uddin.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-base-content transition-colors"
               >
                 Resume Download
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#" className="hover:text-base-content transition-colors">
                 Instructions
               </a>
             </nav>

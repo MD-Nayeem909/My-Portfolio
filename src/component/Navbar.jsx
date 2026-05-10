@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink } from "lucide-react";
-import { Link } from "react-router";
+import { Menu, X, ExternalLink, Sun, Moon } from "lucide-react";
+import { Link, useLocation } from "react-router";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const location = useLocation();
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "dark";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -87,7 +101,7 @@ const Navbar = () => {
       className={`w-full fixed top-0 z-50 shadow-lg backdrop-blur-lg transition-all duration-300 ${
         isScrolled
           ? "bg-base-100 backdrop-blur-lg shadow-lg"
-          : "bg-black backdrop-blur-md"
+          : "bg-transparent backdrop-blur-md"
       } border-b border-base-300 `}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-7xl">
@@ -109,17 +123,25 @@ const Navbar = () => {
           {}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
+              const isActive = location.pathname === "/" && activeSection === link.id;
 
               return (
-                <a
+                <Link
                   key={link.text}
-                  href={link.href}
+                  to={link.href}
                   onClick={(e) => {
-                    e.preventDefault();
-                    document
-                      .getElementById(link.id)
-                      ?.scrollIntoView({ behavior: "smooth" });
+                    if (location.pathname === "/") {
+                      e.preventDefault();
+                      document
+                        .getElementById(link.id)
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      setTimeout(() => {
+                        document
+                          .getElementById(link.id)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }, 100);
+                    }
                   }}
                   className={`text-sm lg:text-base font-medium transition-colors relative group ${
                     isActive
@@ -133,13 +155,24 @@ const Navbar = () => {
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   ></span>
-                </a>
+                </Link>
               );
             })}
           </nav>
 
           {}
           <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-base-300 transition-colors text-base-content"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-4 w-4 lg:h-5 lg:w-5" />
+              ) : (
+                <Moon className="h-4 w-4 lg:h-5 lg:w-5" />
+              )}
+            </button>
             <Link
               to="resume"
               className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium text-base-content border border-neutral/30 rounded-md hover:bg-base-300 transition-all hover:shadow-md transform hover:scale-105"
@@ -153,17 +186,30 @@ const Navbar = () => {
           </div>
 
           {}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-primary hover:bg-base-100 rounded-md transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-5 w-5 sm:h-6 sm:w-6" />
-            ) : (
-              <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
-            )}
-          </button>
+          <div className="flex items-center md:hidden space-x-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-base-content hover:bg-base-100 rounded-md transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5 sm:h-6 sm:w-6" />
+              ) : (
+                <Moon className="h-5 w-5 sm:h-6 sm:w-6" />
+              )}
+            </button>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-primary hover:bg-base-100 rounded-md transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-5 w-5 sm:h-6 sm:w-6" />
+              ) : (
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {}
@@ -175,14 +221,28 @@ const Navbar = () => {
           <div className="py-4 border-t border-base-300">
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.text}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  to={link.href}
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    if (location.pathname === "/") {
+                      e.preventDefault();
+                      document
+                        .getElementById(link.id)
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      setTimeout(() => {
+                        document
+                          .getElementById(link.id)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }, 100);
+                    }
+                  }}
                   className="px-3 py-2.5 text-sm sm:text-base font-medium text-base-content hover:text-primary rounded-md hover:bg-base-300 transition-colors"
                 >
                   {link.text}
-                </a>
+                </Link>
               ))}
               <div className="pt-4 mt-2 border-t border-base-300 flex flex-col space-y-2">
                 <Link
@@ -192,7 +252,7 @@ const Navbar = () => {
                   <span>Resume</span>
                   <ExternalLink className="h-4 w-4" />
                 </Link>
-                <button className="px-3 py-2.5 text-sm font-medium bg-base-100 text-primary dark:text-gray-900 rounded-md hover:bg-base-300 transition-colors">
+                <button className="px-3 py-2.5 text-sm font-medium bg-base-100 text-primary rounded-md hover:bg-base-300 transition-colors">
                   Hire Me
                 </button>
               </div>
